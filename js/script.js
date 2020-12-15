@@ -1,7 +1,7 @@
 let item_wrapper = document.querySelector('[data-name="item-wrapper"]');
 
 function childrenSize(val){
-    console.log(val)
+    //console.log(val)
      item_wrapper.innerHTML='';
      for(let i = 0; i < Number(val); i++){
          const randomNum = Math.round(Math.random() * 20);
@@ -45,7 +45,7 @@ function ItemChanging(val){
                 v.removeAttribute('style')
             })
             childrenSize(10);
-            console.log('default')
+           // console.log('default')
     }
     //item_span.forEach(v=> v.style.color=val.value)
     //item_span.forEach(v=> v.style.fontFamily = val.value)
@@ -60,12 +60,22 @@ function btnCalling(){
 
     newSpan.setAttribute('style', `color: ${colorRandom[Math.round(Math.random() * colorRandom.length)]}`)
     document.querySelector('[data-name="calling_span"]').appendChild(newSpan);
-    ['p-3', 'd-inline-block', 'h3'].map(v=> newSpan.classList.add(v));
+    ['p-1', 'd-inline-block', 'h5'].map(v=> newSpan.classList.add(v));
 
     let item_span = document.querySelectorAll(`[data-name='item_span']`);
-    item_span.forEach(v=> {
+    item_span.forEach((v,i,j)=> {
         if(v.hasAttribute(`data-randomNum${randomNum}`)){
-            v.classList.add('selected')
+            v.classList.add('selected');
+        }
+        if(i <= 4){
+            console.log(i)
+            if(item_span[0].classList.contains('selected') && 
+            item_span[1].classList.contains('selected') &&
+            item_span[2].classList.contains('selected') &&
+            item_span[3].classList.contains('selected') &&
+            item_span[4].classList.contains('selected')) {
+                item_span[i].classList.add('selected_done');
+            }
         }
     })
     

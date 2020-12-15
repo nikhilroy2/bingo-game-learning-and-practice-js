@@ -27,4 +27,8 @@ body {
   background: #0000ff;
   color: #fff;
 }
+
+[data-name='item_span'].selected_done {
+  background: #EC16F4;
+}
 /*# sourceMappingURL=style.css.map */
