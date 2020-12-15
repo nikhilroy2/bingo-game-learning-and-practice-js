@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+[data-name='item_span']{
+    color: red;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.selected{
+        background: #0000ff;
+        color: #fff;
+    }
+}

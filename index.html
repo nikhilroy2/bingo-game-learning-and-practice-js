@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css' />
+        <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="post" >
+            <div class="d-flex justify-content-between">
+                <div class="form-group">
+                    <label for="">Size</label>
+                    <input autocomplete="off"  type="number" name="number" value="10" id="inputSize" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="radio" id="" data-name="fontColor" onchange="inputControl(this)" value="red" checked>
+                            Red
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="radio" id="" data-name="fontColor" onchange="inputControl(this)" value="green">
+                            Green
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="radio" id="" data-name="fontColor" onchange="inputControl(this)" value="blue">
+                            Blue
+                        </label>
+                    </div>
+    
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                      <label for="">Font:</label>
+                      <select class="form-control" name="" data-name="fontName" onchange="inputControl(this)" id="">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                      <label for="">Font Size:</label>
+                      <select data-name="fontSize"  class="form-control" name="" id="" onchange="inputControl(this)">
+                        <option value="10px">10px</option>
+                        <option value="20px" selected>20px</option>
+                        <option value="30px">30px</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group w-100 py-5">
+                <button class="btn btn-primary" type="button" onclick="ItemSize(document.getElementById('inputSize'))">Update Bingo Board</button>
+                <button class="btn btn-primary" onclick="btnCalling()" type="button">Call</button>
+                <button class="btn btn-primary" onclick="inputControl(this)" type="reset">Reset</button>
+            </div>
+            <div class="row no-gutters row-cols-1">
+                <div class="col d-flex flex-nowrap">
+                    <div class="d-flex" data-name="item-wrapper" style="overflow: auto">
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters row-cols-1 pt-5">
+                <div class="col">
+                    <span class="h1 text-primary">Calls </span>
+                </div>
+                <div data-name="calling_span" class="col">
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
